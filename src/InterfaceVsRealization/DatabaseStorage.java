@@ -16,6 +16,7 @@ public class DatabaseStorage implements Storage {
     private static final String INSERT_SQL = "INSERT INTO " + CURRENT_DATABASE_NAME + "(data) VALUES (?)";
     private static final String SELECT_SQL = "SELECT data FROM " + CURRENT_DATABASE_NAME + " WHERE id = ?";
 
+
     public DatabaseStorage() {
         try (Connection connection = connectToDatabase()) {
             connection.createStatement().execute(MAKE_NEW_TABLE);
