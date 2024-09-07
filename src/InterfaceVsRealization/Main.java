@@ -11,6 +11,5 @@ public class Main {
         String firstString = ds.retrieve(1);
         String secondString = ds.retrieve(2);
         String thirdString = ds.retrieve(3);
-
     }
 }
