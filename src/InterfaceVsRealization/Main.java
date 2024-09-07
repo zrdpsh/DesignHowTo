@@ -2,12 +2,15 @@ package InterfaceVsRealization;
 
 public class Main {
     public static void main(String[] args) {
-        Storage memoryStorage = new InMemoryStorage();
-        memoryStorage.save("Data in memory");
-        System.out.println("InMemoryStorage: " + memoryStorage.retrieve(0));
 
-        Storage fileStorage = new FileStorage();
-        fileStorage.save("Data in file");
-        System.out.println("FileStorage: " + fileStorage.retrieve(0));
+        Storage ds = new DatabaseStorage();
+        ds.save("one");
+        ds.save("two");
+        ds.save("three");
+
+        String firstString = ds.retrieve(1);
+        String secondString = ds.retrieve(2);
+        String thirdString = ds.retrieve(3);
+
     }
 }

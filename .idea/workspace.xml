@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-
     <list default="true" id="6bdb4f8f-8bcd-4ac3-8c3a-7a87df59860f" name="Changes" comment="Main class realization added">
       <change afterPath="$PROJECT_DIR$/src/InterfaceVsRealization/DatabaseStorage.java" afterDir="false" />
 
-
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/InterfaceVsRealization/Storage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/InterfaceVsRealization/Storage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,9 +64,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1725674419685</updated>
-
       <workItem from="1725674421320" duration="11484000" />
-
 
     </task>
     <task id="LOCAL-00001" summary="Project created;&#10;Storage interface added;">

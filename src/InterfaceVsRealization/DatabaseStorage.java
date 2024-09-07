@@ -4,7 +4,9 @@ import java.sql.*;
 
 public class DatabaseStorage implements Storage {
 
-    private static final String URL_DB = "jdbc:mysql://localhost:3306/newdatabase";
+
+    private static final String URL_DB = "jdbc:mysql://localhost:3306/newDatabase";
+
     private static final String USER_DB = "root";
     private static final String PASSWORD_DB = "password";
 
