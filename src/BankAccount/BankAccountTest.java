@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class BankAccountTest {
 
     private static final double SMALLER = 10;
-    private static final double BIGGER = 10000;
+    private static final double BIGGER = 100000;
     private BankAccount simpleBankAccount;
     private BankAccount smallerAccount;
     private BankAccount biggerAccount;
