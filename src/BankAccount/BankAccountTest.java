@@ -24,10 +24,23 @@ public class BankAccountTest {
     }
 
     @Test
-    public void testRandom() {
+    public void testCreationWithRandom() {
         Random classRandom = new Random();
         double numberRandom = classRandom.nextDouble() * 10000;
         assertDoesNotThrow(() -> new BankAccount(numberRandom));
+
+    }
+
+    @Test
+    public void testOperationsWithRandom() {
+        Random classRandom = new Random();
+        double numberRandom = classRandom.nextDouble() * 10000;
+        BankAccount newBA = new BankAccount(numberRandom);
+        assertEquals(newBA.getBalance(), numberRandom);
+        newBA.deposit(BIGGER);
+        newBA.withdraw(SMALLER);
+        assertEquals(newBA.getBalance(), numberRandom + BIGGER - SMALLER);
+
     }
 
     @Test
@@ -36,7 +49,7 @@ public class BankAccountTest {
     }
 
     @Test
-    public void testGettingSmallerDeposit() {
+    public void testGettingSmallerBalance() {
         assertDoesNotThrow( () -> smallerAccount.getBalance());
         assertEquals(smallerAccount.getBalance(), SMALLER);
     }
@@ -59,7 +72,7 @@ public class BankAccountTest {
     }
     
     @Test
-    public void testGettingBiggerDeposit() {
+    public void testGettingBiggerBalance() {
         assertDoesNotThrow( () -> biggerAccount.getBalance());
         assertEquals(biggerAccount.getBalance(), BIGGER);
     }
@@ -67,12 +80,14 @@ public class BankAccountTest {
     @Test
     public void testPutIntoBiggerDeposit() {
         assertDoesNotThrow( () -> biggerAccount.deposit(10));
-        assertEquals(biggerAccount.getBalance(), 10010);
+        assertEquals(biggerAccount.getBalance(), BIGGER + 10);
     }
 
     @Test
     public void testTakeFromBiggerDeposit() {
         assertDoesNotThrow( () -> biggerAccount.withdraw(10));
-        assertEquals(biggerAccount.getBalance(), 9990);
+        assertEquals(biggerAccount.getBalance(), BIGGER - 10);
     }
+
+
 }
