@@ -44,6 +44,12 @@ public class BankAccountTest {
     }
 
     @Test
+    public void lessThanZero() {
+        assertDoesNotThrow( () -> smallerAccount.withdraw(SMALLER+1));
+        assertTrue(smallerAccount.getBalance() < 0);
+    }
+
+    @Test
     public void testMakeSmallerDeposit() {
         assertDoesNotThrow(() -> new BankAccount(SMALLER));
     }
