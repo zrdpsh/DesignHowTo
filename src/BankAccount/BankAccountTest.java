@@ -46,7 +46,19 @@ public class BankAccountTest {
     @Test
     public void lessThanZero() {
         assertDoesNotThrow( () -> smallerAccount.withdraw(SMALLER+1));
-        assertTrue(smallerAccount.getBalance() < 0);
+        assertFalse(smallerAccount.getBalance() < 0);
+    }
+
+    @Test
+    public void addNegativeSum() {
+        assertDoesNotThrow( () -> smallerAccount.deposit(-(SMALLER+1)));
+        assertFalse(smallerAccount.getBalance() < 0);
+    }
+
+    @Test
+    public void takeNegativeSum() {
+        assertDoesNotThrow( () -> smallerAccount.withdraw(-(SMALLER+1)));
+        assertFalse(smallerAccount.getBalance() < 0);
     }
 
     @Test
