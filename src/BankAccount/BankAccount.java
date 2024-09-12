@@ -9,11 +9,15 @@ public class BankAccount {
     }
 
     public void deposit(double plusMoney) {
-        balance += plusMoney;
+        if (plusMoney >= 0) {
+            balance += plusMoney;
+        }
     }
 
     public void withdraw(double minusMoney) {
-        balance -= minusMoney;
+        if (minusMoney >= 0 && minusMoney <= this.balance) {
+            balance -= minusMoney;
+        }
     }
 
     public double getBalance() {
