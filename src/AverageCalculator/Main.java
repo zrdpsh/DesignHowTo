@@ -5,6 +5,5 @@ public class Main {
         int[] aEmptyArray = new int[12];
         AverageCalculator aCalculator = new AverageCalculator();
         System.out.println(aCalculator.calculateAverage(aEmptyArray));
-
     }
 }
