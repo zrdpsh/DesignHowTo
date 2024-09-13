@@ -11,7 +11,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AverageCalculatorTest {
 
     @Test
-    public void OneNumberTest {
+    public void OneNumberTest() {
         Random classRandom = new Random();
         double numberRandom = classRandom.nextDouble() * 10000;
         assertDoesNotThrow(() -> new BankAccount(numberRandom));
@@ -20,7 +20,7 @@ public class AverageCalculatorTest {
 
 
     @Test
-    public void randomNumbersTest {
+    public void randomNumbersTest() {
         Random classRandom = new Random();
         double numberRandom = classRandom.nextDouble() * 10000;
         assertDoesNotThrow(() -> new BankAccount(numberRandom));
