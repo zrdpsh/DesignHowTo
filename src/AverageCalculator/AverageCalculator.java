@@ -1,5 +1,7 @@
 package AverageCalculator;
 
+
+
 public class AverageCalculator {
     public double calculateAverage(int[] numbers) {
         double sum = 0;
@@ -9,3 +11,5 @@ public class AverageCalculator {
         return sum / numbers.length;
     }
 }
+
+
