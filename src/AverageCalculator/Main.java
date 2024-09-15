@@ -8,7 +8,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println("The floating-point arithmetic doesn't give the accurate results");
+        System.out.println("The floating-point arithmetic doesn't give accurate results");
 
         AverageCalculator aCalculator = new AverageCalculator();
         int[] numbers = {1, 1, 1, 1000000};
