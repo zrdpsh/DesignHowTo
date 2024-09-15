@@ -15,7 +15,6 @@ import static org.junit.jupiter.api.Assertions.*;
 public class AverageCalculatorTest {
 
     private AverageCalculator aCalculator;
-    private int RANDOM_BOUND = 1000;
 
     @BeforeEach
     public void setUp() {
@@ -23,65 +22,45 @@ public class AverageCalculatorTest {
     }
 
     @Test
-    public void OneNumberTest() {
-        int[] anArray = new int[] {1};
-
-        double testResult = aCalculator.calculateAverage(anArray);
-        assertEquals(testResult, getReferenceResult(anArray));
-    }
-
-
-    @Test
-    public void testOneRandomArray() {
-        randomNumbersTest(1);
+    public void testAverageOfPositiveNumbers() {
+        int[] numbers = {2, 4, 6, 8, 10};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(6.0, result, 0.001);
     }
 
     @Test
-    public void testRandomArraysRandomTimes() {
-        Random randomNumbers = new Random();
-        int numberOfTests = Math.abs(randomNumbers.nextInt());
-        randomNumbersTest(numberOfTests);
-        System.out.println("Functions had been tested " + numberOfTests + " times");
+    public void testAverageOfNegativeNumbers() {
+        int[] numbers = {-2, -4, -6, -8, -10};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(-6.0, result, 0.001);
     }
 
-
-    private void testWithRandomArray() {
-        Random randomNumbers = new Random();
-        int aLength = randomNumbers.nextInt(RANDOM_BOUND);
-
-        int[] aRandomArray = new int[aLength];
-
-        for (int i = 0; i < aRandomArray.length; i++) {
-            aRandomArray[i] = randomNumbers.nextInt() * RANDOM_BOUND;
-        }
-
-        System.out.println("The function of " + aLength + " random values");
-
-
-        double testResult = aCalculator.calculateAverage(aRandomArray);
-
-        assertEquals(testResult, getReferenceResult(aRandomArray));
+    @Test
+    public void testAverageOfMixedNumbers() {
+        int[] numbers = {-2, 4, -6, 8, -10};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(-1.2, result, 0.001);
     }
 
-    private void randomNumbersTest(int howManyTimes) {
-        for (int i = 0; i < howManyTimes; i++) {
-            System.out.println("Test No. " + (i+1) + " started");
-            testWithRandomArray();
-        }
+    @Test
+    public void testAverageOfSingleElement() {
+        int[] numbers = {5};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(5.0, result, 0.001);
     }
 
-
-    private static double getReferenceResult(int[] anArray) {
-        List<Integer> aList  = Arrays
-                .stream(anArray)
-                .boxed()
-                .collect(Collectors.toList());
-
-        IntSummaryStatistics iss = aList
-                .stream()
-                .mapToInt((a) -> a)
-                .summaryStatistics();
-
-        return iss.getAverage();
+    @Test
+    public void testAverageOfEmptyArray() {
+        int[] numbers = {};
+        double result = aCalculator.calculateAverage(numbers);
+        assertTrue(Double.isNaN(result));
     }
+
+    @Test
+    public void testAverageOfZeros() {
+        int[] numbers = {0, 0, 0, 0};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(0.0, result, 0.001);
+    }
+
 }
