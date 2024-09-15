@@ -63,4 +63,19 @@ public class AverageCalculatorTest {
         assertEquals(0.0, result, 0.001);
     }
 
+    @Test
+    public void testMaximumPossibleSizes() {
+        int[] numbers = {Integer.MAX_VALUE};
+        Arrays.fill(numbers, Integer.MAX_VALUE);
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(Integer.MAX_VALUE, result, 0.001);
+    }
+
+    @Test
+    public void testZerosAndMaxValuesMixed() {
+        int[] numbers = {Integer.MAX_VALUE, Integer.MAX_VALUE, 0, 0};
+        double result = aCalculator.calculateAverage(numbers);
+        assertEquals(((double)Integer.MAX_VALUE * 2) / 4, result, 0.001);
+    }
+
 }
