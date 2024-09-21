@@ -145,13 +145,13 @@ public class DeadlockExampleFixed {
 
         Thread thread2 = new Thread(() -> {
             synchronized (lock1) {
-                System.out.println("Thread 2 acquired lock2");
+                System.out.println("Thread 2 acquired lock1");
 
                 try { Thread.sleep(50); } 
                 catch (InterruptedException e) { e.printStackTrace(); }
 
                 synchronized (lock2) {
-                    System.out.println("Thread 2 acquired lock1");
+                    System.out.println("Thread 2 acquired lock2");
                 }
             }
         });
