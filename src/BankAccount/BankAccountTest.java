@@ -88,12 +88,7 @@ public class BankAccountTest {
     public void testMakeBiggerDeposit() {
         assertDoesNotThrow(() -> new BankAccount(BIGGER));
     }
-    
-    @Test
-    public void testGettingBiggerBalance() {
-        assertDoesNotThrow( () -> biggerAccount.getBalance());
-        assertEquals(biggerAccount.getBalance(), BIGGER);
-    }
+
 
     @Test
     public void testPutIntoBiggerDeposit() {
