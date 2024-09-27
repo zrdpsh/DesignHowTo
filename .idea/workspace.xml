@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bdb4f8f-8bcd-4ac3-8c3a-7a87df59860f" name="Changes" comment="Main class realization added">
-      <change afterPath="$PROJECT_DIR$/src/InterfaceVsRealization/DatabaseStorage.java" afterDir="false" />
-
+    <list default="true" id="6bdb4f8f-8bcd-4ac3-8c3a-7a87df59860f" name="Changes" comment="separate files">
+      <change afterPath="$PROJECT_DIR$/src/DateTime/DateTimeFixed.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -18,6 +17,9 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Merge.Settings">
+    <option name="BRANCH" value="origin/main" />
   </component>
   <component name="Git.Pull.Settings">
     <option name="OPTIONS">
@@ -45,17 +47,54 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "project.structure.last.edited": "Facets",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Facets&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="AverageCalculator.Main" />
+      <module name="InterfaceVSRealization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AverageCalculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AverageCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InterfaceVSRealization" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="AverageCalculator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="AverageCalculator" />
+      <option name="MAIN_CLASS_NAME" value="AverageCalculator.AverageCalculatorTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.AverageCalculatorTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +104,16 @@
       <option name="presentableId" value="Default" />
       <updated>1725674419685</updated>
       <workItem from="1725674421320" duration="11484000" />
-
+      <workItem from="1726265838508" duration="353000" />
+      <workItem from="1726341109102" duration="117000" />
+      <workItem from="1726362665055" duration="3163000" />
+      <workItem from="1726404988174" duration="609000" />
+      <workItem from="1726650489040" duration="3694000" />
+      <workItem from="1727181774953" duration="1986000" />
+      <workItem from="1727208853018" duration="14000" />
+      <workItem from="1727211136001" duration="12000" />
+      <workItem from="1727393366723" duration="20000" />
+      <workItem from="1727417750709" duration="986000" />
     </task>
     <task id="LOCAL-00001" summary="Project created;&#10;Storage interface added;">
       <created>1725675374624</created>
@@ -102,7 +150,6 @@
       <option name="project" value="LOCAL" />
       <updated>1725677655669</updated>
     </task>
-
     <task id="LOCAL-00006" summary="In-memory realization added">
       <created>1725678116762</created>
       <option name="number" value="00006" />
@@ -124,9 +171,98 @@
       <option name="project" value="LOCAL" />
       <updated>1725678956552</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
-
-
+    <task id="LOCAL-00009" summary="Main class added">
+      <created>1726258800806</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1726258800806</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Main class and Test class added">
+      <created>1726258842467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1726258842467</updated>
+    </task>
+    <task id="LOCAL-00011" summary="test class fixed">
+      <created>1726258898828</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1726258898828</updated>
+    </task>
+    <task id="LOCAL-00012" summary="&quot;Returns Nan without an error&quot; added">
+      <created>1726259106253</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1726259106253</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Random tests added">
+      <created>1726263464091</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1726263464091</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Tests rewritten">
+      <created>1726363922161</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1726363922161</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Tests updated">
+      <created>1726365785217</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1726365785217</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Main method rewritten">
+      <created>1726365810320</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1726365810320</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Tipo is fixed">
+      <created>1726365846444</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1726365846444</updated>
+    </task>
+    <task id="LOCAL-00018" summary="GradeCalculator and GradeCalculatorTest added">
+      <created>1726654435809</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1726654435809</updated>
+    </task>
+    <task id="LOCAL-00019" summary="typos fixed">
+      <created>1726666213546</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1726666213546</updated>
+    </task>
+    <task id="LOCAL-00020" summary="semaphores - locks - barriers - futures - executor Service">
+      <created>1727184259356</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1727184259357</updated>
+    </task>
+    <task id="LOCAL-00021" summary="separate files">
+      <created>1727184535999</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1727184535999</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,11 +310,33 @@
     <MESSAGE value="Project created;&#10;Storage interface added;" />
     <MESSAGE value="Storage interface updated;" />
     <MESSAGE value="Files packed;" />
-
     <MESSAGE value="In-memory realization added" />
     <MESSAGE value="File storage realization added" />
     <MESSAGE value="Main class realization added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main class realization added" />
-
+    <MESSAGE value="Main class added" />
+    <MESSAGE value="Main class and Test class added" />
+    <MESSAGE value="test class fixed" />
+    <MESSAGE value="&quot;Returns Nan without an error&quot; added" />
+    <MESSAGE value="Random tests added" />
+    <MESSAGE value="Tests rewritten" />
+    <MESSAGE value="Tests updated" />
+    <MESSAGE value="Main method rewritten" />
+    <MESSAGE value="Tipo is fixed" />
+    <MESSAGE value="GradeCalculator and GradeCalculatorTest added" />
+    <MESSAGE value="typos fixed" />
+    <MESSAGE value="semaphores - locks - barriers - futures - executor Service" />
+    <MESSAGE value="separate files" />
+    <option name="LAST_COMMIT_MESSAGE" value="separate files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/AverageCalculator/AverageCalculator.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
