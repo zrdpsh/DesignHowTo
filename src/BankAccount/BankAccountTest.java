@@ -31,6 +31,7 @@ public class BankAccountTest {
 
     }
 
+    
     @Test
     public void testOperationsWithRandom() {
         Random classRandom = new Random();
