@@ -1,5 +1,5 @@
 Первоначальный вариант:
-```
+```java
 public class TicTacToeClient extends Application
         implements TicTacToeConstants {
     // Indicate whether the player has the turn
