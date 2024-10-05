@@ -244,7 +244,7 @@ public class TicTacToeClient extends Application
 }
 ```
 вариант в функциональном стиле:
-```
+```java
 public class TicTacToeClient2 extends Application implements TicTacToeConstants {
 
     // Immutable class to represent the state of the game
