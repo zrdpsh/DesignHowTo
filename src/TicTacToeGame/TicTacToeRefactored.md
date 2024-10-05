@@ -247,7 +247,7 @@ public class TicTacToeClient extends Application
 ```java
 public class TicTacToeClient2 extends Application implements TicTacToeConstants {
 
-    // Immutable class to represent the state of the game
+
     public static final class GameState {
         private final boolean myTurn;
         private final char myToken;
@@ -271,7 +271,7 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
             this.cell = cell;
         }
 
-        // Copy constructor to create new state
+
         public GameState withUpdatedTurn(boolean newTurn) {
             return new GameState(newTurn, myToken, otherToken, continueToPlay, waiting, rowSelected, columnSelected, cell);
         }
@@ -297,7 +297,6 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
         }
     }
 
-    // Immutable class to represent a move
     public static final class Move {
         private final int row;
         private final int column;
@@ -316,7 +315,7 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
         }
     }
 
-    // Data input and output are also immutable
+
     private final DataInputStream fromServer;
     private final DataOutputStream toServer;
     private final String host = "localhost";
@@ -330,7 +329,7 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
 
     @Override
     public void start(Stage primaryStage) {
-        // Set up the initial state
+
         GameState initialState = new GameState(false, ' ', ' ', true, true, -1, -1, new Cell[3][3]);
         GridPane pane = setupUI(initialState);
 
@@ -366,7 +365,6 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
                 int player = fromServer.readInt();
                 GameState newState = initializePlayer(state, player, lblTitle, lblStatus);
 
-                // Continue to play
                 while (newState.continueToPlay) {
                     if (player == PLAYER1) {
                         newState = waitForPlayerAction(newState);
@@ -390,7 +388,7 @@ public class TicTacToeClient2 extends Application implements TicTacToeConstants 
                 lblTitle.setText("Player 1 with token 'X'");
                 lblStatus.setText("Waiting for player 2 to join");
             });
-            fromServer.readInt(); // Ignore server startup info
+            fromServer.readInt();
 
             Platform.runLater(() -> lblStatus.setText("Player 2 has joined. I start first"));
             return state.withUpdatedTurn(true).withUpdatedCell(-1, -1, 'X');
