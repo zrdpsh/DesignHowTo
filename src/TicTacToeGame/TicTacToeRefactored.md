@@ -47,7 +47,8 @@ public class TicTacToeClient extends Application
     // the rest of the code
 }
 ```
-вариант в функциональном стиле:
+Вариант в функциональном стиле:
+
 Цепочка объявлений свойств класса TicTacToeClient собрана в отдельном классе GameState 
 c методами updatedTurn, updatedCell, waiting, которые возвращают новый экземпляр этого класса (иммутабельность). 
 ```java
