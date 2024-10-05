@@ -245,8 +245,9 @@ public class TicTacToeClient extends Application
 ```
 вариант в функциональном стиле:
 ```
-public class TicTacToeClient extends Application implements TicTacToeConstants {
+public class TicTacToeClient2 extends Application implements TicTacToeConstants {
 
+    // Immutable class to represent the state of the game
     public static final class GameState {
         private final boolean myTurn;
         private final char myToken;
@@ -270,6 +271,7 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
             this.cell = cell;
         }
 
+        // Copy constructor to create new state
         public GameState withUpdatedTurn(boolean newTurn) {
             return new GameState(newTurn, myToken, otherToken, continueToPlay, waiting, rowSelected, columnSelected, cell);
         }
@@ -295,6 +297,7 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
         }
     }
 
+    // Immutable class to represent a move
     public static final class Move {
         private final int row;
         private final int column;
@@ -313,12 +316,13 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
         }
     }
 
-
+    // Data input and output are also immutable
     private final DataInputStream fromServer;
     private final DataOutputStream toServer;
     private final String host = "localhost";
 
     public TicTacToeClient() throws IOException {
+        // Create a socket to connect to the server
         Socket socket = new Socket(host, 8000);
         this.fromServer = new DataInputStream(socket.getInputStream());
         this.toServer = new DataOutputStream(socket.getOutputStream());
@@ -326,7 +330,7 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
 
     @Override
     public void start(Stage primaryStage) {
-
+        // Set up the initial state
         GameState initialState = new GameState(false, ' ', ' ', true, true, -1, -1, new Cell[3][3]);
         GridPane pane = setupUI(initialState);
 
@@ -439,7 +443,6 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
         launch(args);
     }
 
-    // The inner Cell class remains largely the same but should also be immutable
     public static final class Cell extends Pane {
         private final int row;
         private final int column;
@@ -476,6 +479,21 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
         protected void repaint(char token) {
             if (token == 'X') {
                 Line line1 = new Line(10, 10, this.getWidth() - 10, this.getHeight() - 10);
-                Line line2 = new Line(10, this.getHeight() - 10
+                Line line2 = new Line(10, this.getHeight() - 10, this.getWidth() - 10, 10);
 
+                line1.setStroke(Color.RED);
+                line2.setStroke(Color.RED);
+
+                this.getChildren().addAll(line1, line2);
+            } else if (token == 'O') {
+                Ellipse ellipse = new Ellipse(this.getWidth() / 2, this.getHeight() / 2,
+                        this.getWidth() / 2 - 10, this.getHeight() / 2 - 10);
+                ellipse.setStroke(Color.BLUE);
+                ellipse.setFill(Color.TRANSPARENT);
+
+                this.getChildren().add(ellipse);
+            }
+        }
+    }
+}
 ```
