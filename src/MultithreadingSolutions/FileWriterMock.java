@@ -5,6 +5,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Random;
 
+
 public class FileWriterMock {
     private BufferedWriter writer;
     private static final Random random = new Random();
