@@ -16,6 +16,8 @@ import java.util.TimeZone;
 * Для опрятности дописать часовой пояс внутри try.
  */
 
+
+
 public class DateTimeFixed {
     private static final String DATE_STRING = "2024-05-13 14:30:00";
     private static final String DATE_FORMAT = "yyyy-MM-dd HH:mm:ss";
