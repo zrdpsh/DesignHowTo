@@ -17,4 +17,5 @@ public class GradeCalculator {
                         .orElse(0.0))
                 .orElse(0.0);
     }
+    
 }
