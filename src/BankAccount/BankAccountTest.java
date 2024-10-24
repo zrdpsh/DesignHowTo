@@ -30,7 +30,6 @@ public class BankAccountTest {
         assertDoesNotThrow(() -> new BankAccount(numberRandom));
 
     }
-
     
     @Test
     public void testOperationsWithRandom() {
