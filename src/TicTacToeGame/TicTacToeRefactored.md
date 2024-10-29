@@ -3,6 +3,7 @@
 public class TicTacToeClient extends Application
         implements TicTacToeConstants {
 
+
     private boolean myTurn = false;
     private char myToken = ' ';
     private char otherToken = ' ';
