@@ -18,3 +18,4 @@ public class GradeCalculator {
                 .orElse(0.0);
     }
 }
+
