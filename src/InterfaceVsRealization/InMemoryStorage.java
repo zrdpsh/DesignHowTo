@@ -3,6 +3,7 @@ package InterfaceVsRealization;
 import java.util.HashMap;
 import java.util.Map;
 
+
 public class InMemoryStorage implements Storage {
     private Map<Integer, String> storage = new HashMap<>();
     private int counter = 0;
