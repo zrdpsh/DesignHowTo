@@ -16,7 +16,6 @@ public class FileWriterMock {
         writer = new BufferedWriter(new FileWriter(fileName, true)); // Open file in append mode
         System.out.println(Thread.currentThread().getName() + " opened the file.");
     }
-    
 
     public void write(String content) throws IOException {
         if (writer == null) {
