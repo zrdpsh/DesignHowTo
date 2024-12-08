@@ -16,7 +16,6 @@ public class BankAccountTest {
     private BankAccount smallerAccount;
     private BankAccount biggerAccount;
 
-
     @BeforeEach
     public void setUp() {
         smallerAccount = new BankAccount(SMALLER);
