@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Optional;
 
 
-
 public class GradeCalculator {
 
     public static double calculateAverage(List<Integer> grades) {
