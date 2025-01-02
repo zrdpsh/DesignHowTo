@@ -12,7 +12,7 @@ public class InMemoryStorage implements Storage {
     public void save(String data) {
         storage.put(counter++, data);
     }
-    
+
     @Override
     public String retrieve(int id) {
         return storage.get(id);
