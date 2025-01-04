@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-
 public class ExecutorServiceFileWrite {
     private static final ExecutorService executor = Executors.newFixedThreadPool(3);
     private static final FileWriterMock fileWriter = new FileWriterMock();
