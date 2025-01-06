@@ -13,6 +13,7 @@ public interface GameUI {
 }
 ```
 
+
 1. Реализация ServerConnection
 ```java
 public class SocketServerConnection implements ServerConnection {
