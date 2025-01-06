@@ -204,6 +204,7 @@ public class TicTacToeClient extends Application implements TicTacToeConstants {
 
 ```
 
+
 4. + Ещё один новый класс, чтобы собрать всё это вместе:
 ```java
 public class TicTacToeClientLauncher {
