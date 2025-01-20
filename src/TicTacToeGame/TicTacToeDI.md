@@ -13,7 +13,6 @@ public interface GameUI {
 }
 ```
 
-
 1. Реализация ServerConnection
 ```java
 public class SocketServerConnection implements ServerConnection {
@@ -69,7 +68,8 @@ public class JavaFXGameUI implements GameUI {
 }
 ```
 
-3. Переписанный первоначальный класс TicTacToeClient. UI и коннект с сервером теперь можно менять независимо от клиента
+3. Переписанный первоначальный класс TicTacToeClient.
+4. UI и коннект с сервером теперь можно менять независимо от клиента
 
 ```java
 public class TicTacToeClient extends Application implements TicTacToeConstants {
