@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Random;
 
+
 public class ComplexMultiThreadProcessingFixed {
     private static final int SIZE = 1000000;
     private static final int[] data = new int[SIZE];
