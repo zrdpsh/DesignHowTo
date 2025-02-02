@@ -7,7 +7,6 @@ public class BankAccount {
     public BankAccount(double initialBalance) {
         this.balance = initialBalance;
     }
-
     public void deposit(double plusMoney) {
         if (plusMoney >= 0) {
             balance += plusMoney;
