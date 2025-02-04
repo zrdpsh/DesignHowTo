@@ -11,11 +11,13 @@ public class TicTacToeClient extends Application
     private Label lblTitle = new Label();
     private Label lblStatus = new Label();
 
+
     private int rowSelected;
     private int columnSelected;
 
     private DataInputStream fromServer;
     private DataOutputStream toServer;
+
 
     private boolean continueToPlay = true;
 
