@@ -21,7 +21,6 @@ public class BankAccountTest {
         smallerAccount = new BankAccount(SMALLER);
         biggerAccount = new BankAccount(BIGGER);
     }
-
     @Test
     public void testCreationWithRandom() {
         Random classRandom = new Random();
