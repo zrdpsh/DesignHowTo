@@ -46,6 +46,7 @@ public class GradeCalculatorTest {
         double result = calculator.calculateAverage(grades);
         assertEquals(85.0, result, 0.01);
     }
+   
     @Test
     public void testMultipleGrades() {
         
