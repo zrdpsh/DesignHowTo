@@ -10,6 +10,7 @@ public class ReadWriteLockFileWrite {
     private static final FileWriterMock fileWriter = new FileWriterMock();
     private static final String fileName = "output.txt";
 
+    
     public static void writeToFile(String content) {
         writeLock.lock();
         try {
