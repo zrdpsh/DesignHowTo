@@ -32,6 +32,7 @@ public class GradeCalculatorTest {
         assertEquals(0.0, result, 0.01);
     }
 
+   
     @Test
     public void testMixedNullAndNonNull() {
         GradeCalculator calculator = new GradeCalculator();
