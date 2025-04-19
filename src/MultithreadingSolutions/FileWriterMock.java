@@ -9,6 +9,7 @@ import java.util.Random;
 public class FileWriterMock {
     private BufferedWriter writer;
     private static final Random random = new Random();
+    
 
     public void open(String fileName) throws IOException {
         System.out.println(Thread.currentThread().getName() + " is opening the file: " + fileName);
